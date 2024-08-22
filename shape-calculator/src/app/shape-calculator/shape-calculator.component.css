@@ -1,0 +1,58 @@
+
+.shape-calculator {
+     max-width: 400px;
+     max-height: 88vh;
+     width: 100%;
+     padding: 20px;
+     background: linear-gradient(to right, #eb53eb, #ba0bdd);
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     text-align: center; 
+}
+  
+h1 {
+      text-align: center;
+}
+
+.shape{
+      margin-bottom: 15px;
+}
+  
+label {
+      display: block;
+      margin: 10px 0 5px;
+}
+  
+input {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 20px; /* Add more space below the input fields */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right: auto;
+}
+  
+button {
+      width: 60%;
+      padding: 10px;
+      color: rgb(3, 3, 3);
+      background-color: pink;
+      cursor: pointer;
+      border: 1px solid black;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-top: 20px; 
+      transition: 1s;
+}
+  
+button:hover {
+    background: linear-gradient(to right, #eb53eb, #ba0bdd);
+    color: white;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+  

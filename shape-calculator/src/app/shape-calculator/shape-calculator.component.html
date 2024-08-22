@@ -1,0 +1,41 @@
+<div class="shape-calculator">
+  <h1>Shape Area Calculator</h1>
+
+  <label for="shape-select" class="shape">Choose a shape:</label>
+  <select id="shape-select" [(ngModel)]="selectedShape" (change)="onShapeChange()">
+    <option value="circle">Circle</option>
+    <option value="square">Square</option>
+    <option value="rectangle">Rectangle</option>
+    <option value="triangle">Triangle</option>
+  </select>
+
+  <div *ngIf="selectedShape === 'circle'">
+    <label for="radius">Radius:</label>
+    <input type="number" id="radius" [(ngModel)]="radius">
+  </div>
+
+  <div *ngIf="selectedShape === 'square'">
+    <label for="side">Side:</label>
+    <input type="number" id="side" [(ngModel)]="side">
+  </div>
+
+  <div *ngIf="selectedShape === 'rectangle'">
+    <label for="length">Length:</label>
+    <input type="number" id="length" [(ngModel)]="length">
+    <label for="width">Width:</label>
+    <input type="number" id="width" [(ngModel)]="width">
+  </div>
+
+  <div *ngIf="selectedShape === 'triangle'">
+    <label for="height">Height:</label>
+    <input type="number" id="height" [(ngModel)]="height">
+    <label for="base">Base:</label>
+    <input type="number" id="base" [(ngModel)]="base">
+  </div>
+  <div class="btn">
+    <button (click)="calculateArea()">Calculate Area</button>
+  </div>
+  <div *ngIf="area !== null">
+    <h3>The area of the {{ selectedShape }} is: {{ area }}</h3>
+  </div>
+</div>
