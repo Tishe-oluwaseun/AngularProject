@@ -1,0 +1,60 @@
+/* book-action.component.css */
+.form-container {
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(154, 34, 158);
+    color: rgb(207, 202, 202);
+    border-radius: 8px;
+    border: 1px solid black;
+    font-weight: 300;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+label {
+    display: block;
+    margin-top: 5px;
+}
+  
+input, textarea {
+    width: 500px;
+    padding: 15px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 2px solid rgba(0, 0, 0, 0.815);
+    background-color: rgb(149, 231, 252);
+}
+  
+button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px;
+    background-color: rgb(188, 34, 194);
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+  
+button:hover {
+    background-color: gray;
+}
+  
+.error {
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.ng-invalid.ng-touched {
+    border-color: red;
+}
+  
+.ng-valid.ng-touched {
+    border-color: rgb(188, 34, 194);
+}
+  

@@ -1,0 +1,15 @@
+<!-- car-detail.component.html -->
+<div *ngIf="car">
+    <img [src]="car.image" [alt]="car.name">
+    <p>Name: {{ car.name }}</p>
+    <p>Year: {{ car.year }}</p>
+    <p>Company: {{ car.company }}</p>
+    <p>Color: {{ car.color }}</p>
+    <p>Plate Number: {{ car.plateNumber }}</p>
+    <p>Interior Color: {{ car.interiorColor }}</p>
+    <p>Tax Rate: {{ car.taxRate * 100 }}%</p>
+  </div>
+  <div *ngIf="!car">
+    <p>Car details not available.</p>
+  </div>
+  

@@ -1,0 +1,90 @@
+<div class="form-container">
+   <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+     <label for="bookName">Book Name:</label>
+     <input id="bookName" formControlName="bookName" type="text" />
+     <div *ngIf="bookForm.get('bookName')?.invalid && bookForm.get('bookName')?.touched" class="error">
+       Book Name is required.
+     </div>
+ 
+     <label for="author">Author:</label>
+     <input id="author" formControlName="author" type="text" />
+     <div *ngIf="bookForm.get('author')?.invalid && bookForm.get('author')?.touched" class="error">
+       Author is required.
+     </div>
+ 
+     <label for="publishedDate">Published Date:</label>
+     <input id="publishedDate" formControlName="publishedDate" type="date" />
+     <div *ngIf="bookForm.get('publishedDate')?.invalid && bookForm.get('publishedDate')?.touched" class="error">
+       Published Date is required.
+     </div>
+ 
+     <label for="publishCompany">Publish Company:</label>
+     <input id="publishCompany" formControlName="publishCompany" type="text" />
+     <div *ngIf="bookForm.get('publishCompany')?.invalid && bookForm.get('publishCompany')?.touched" class="error">
+       Publish Company is required.
+     </div>
+ 
+     <label for="isbn">ISBN:</label>
+     <input id="isbn" formControlName="isbn" type="text" />
+     <div *ngIf="bookForm.get('isbn')?.invalid && bookForm.get('isbn')?.touched" class="error">
+       ISBN is required.
+     </div>
+ 
+     <label for="numberOfPages">Number of Pages:</label>
+     <input id="numberOfPages" formControlName="numberOfPages" type="number" appNoE/>
+     <div *ngIf="bookForm.get('numberOfPages')?.invalid && bookForm.get('numberOfPages')?.touched" class="error">
+       Number of Pages is required.
+     </div>
+ 
+     <label for="bookFormat">Book Format:</label>
+     <input id="bookFormat" formControlName="bookFormat" type="text" />
+     <div *ngIf="bookForm.get('bookFormat')?.invalid && bookForm.get('bookFormat')?.touched" class="error">
+       Book Format is required.
+     </div>
+ 
+     <label for="bookEdition">Book Edition:</label>
+     <input id="bookEdition" formControlName="bookEdition" type="text" />
+     <div *ngIf="bookForm.get('bookEdition')?.invalid && bookForm.get('bookEdition')?.touched" class="error">
+       Book Edition is required.
+     </div>
+ 
+     <label for="about">About:</label>
+     <textarea id="about" formControlName="about"></textarea>
+     <div *ngIf="bookForm.get('publishedDate')?.invalid && bookForm.get('publishedDate')?.touched" class="error">
+       Published Date is required.
+     </div>
+ 
+     <label for="accessMode">Access Mode:</label>
+     <input id="accessMode" formControlName="accessMode" type="text" />
+     <div *ngIf="bookForm.get('accessMode')?.invalid && bookForm.get('accessMode')?.touched" class="error">
+       Access Mode is required.
+     </div>
+ 
+     <label for="award">Award:</label>
+     <input id="award" formControlName="award" type="text" />
+     <div *ngIf="bookForm.get('award')?.invalid && bookForm.get('award')?.touched" class="error">
+       Award is required.
+    </div>
+ 
+     <label for="copyrightHolder">Copyright Holder:</label>
+     <input id="copyrightHolder" formControlName="copyrightHolder" type="text" />
+     <div *ngIf="bookForm.get('copyrightHolder')?.invalid && bookForm.get('copyrightHolder')?.touched" class="error">
+       Copyright Holder is required.
+     </div>
+ 
+     <label for="copyrightNotice">Copyright Notice:</label>
+     <input id="copyrightNotice" formControlName="copyrightNotice" type="text" />
+     <div *ngIf="bookForm.get('copyrightNotice')?.invalid && bookForm.get('copyrightNotice')?.touched" class="error">
+       Copyright Notice is required.
+     </div>
+ 
+     <label for="copyrightYear">Copyright Year:</label>
+     <input id="copyrightYear" formControlName="copyrightYear" type="text" />
+     <div *ngIf="bookForm.get('copyrightYear')?.invalid && bookForm.get('copyrightYear')?.touched" class="error">
+       Copyright Year is required.
+     </div>
+ 
+     <button type="submit" >Sumbit</button>
+   </form>
+</div>
+ 

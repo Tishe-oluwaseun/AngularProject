@@ -1,0 +1,73 @@
+<div class="book-details" *ngIf="book">
+    <form [formGroup]="editBookForm" (ngSubmit)="onUpdateBook()">
+      <div *ngIf="!isEditing">
+            <h3>{{ book.bookName }}</h3>
+            <p><strong>Author:</strong> {{ book.author }}</p>
+            <p><strong>Published Date:</strong> {{ book.publishedDate }}</p>
+            <p><strong>Publish Company:</strong> {{ book.publishCompany }}</p>
+            <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+            <p><strong>Number of Pages:</strong> {{ book.numberOfPages }}</p>
+            <p><strong>Format:</strong> {{ book.bookFormat }}</p>
+            <p><strong>Edition:</strong> {{ book.bookEdition }}</p>
+            <p><strong>About:</strong> {{ book.about }}</p>
+            <p><strong>Access Mode:</strong> {{ book.accessMode }}</p>
+            <p><strong>Award:</strong> {{ book.award }}</p>
+            <p><strong>Copyright Holder:</strong> {{ book.copyrightHolder }}</p>
+            <p><strong>Copyright Notice:</strong> {{ book.copyrightNotice }}</p>
+            <p><strong>Copyright Year:</strong> {{ book.copyrightYear }}</p>
+      </div>
+     
+      <div *ngIf="isEditing">
+            <label for="bookName">Book Name:</label>
+            <input id="bookName" formControlName="bookName" type="text" />
+    
+            <label for="author">Author:</label>
+            <input id="author" formControlName="author" type="text" />
+    
+            <label for="publishedDate">Published Date:</label>
+            <input id="publishedDate" formControlName="publishedDate" type="date" />
+    
+            <label for="publishCompany">Publish Company:</label>
+            <input id="publishCompany" formControlName="publishCompany" type="text" />
+    
+            <label for="isbn">ISBN:</label>
+            <input id="isbn" formControlName="isbn" type="text" />
+    
+            <label for="numberOfPages">Number of Pages:</label>
+            <input id="numberOfPages" formControlName="numberOfPages" type="number" />
+    
+            <label for="bookFormat">Book Format:</label>
+            <input id="bookFormat" formControlName="bookFormat" type="text" />
+    
+            <label for="bookEdition">Book Edition:</label>
+            <input id="bookEdition" formControlName="bookEdition" type="text" />
+    
+            <label for="about">About:</label>
+            <textarea id="about" formControlName="about"></textarea>
+    
+            <label for="accessMode">Access Mode:</label>
+            <input id="accessMode" formControlName="accessMode" type="text" />
+    
+            <label for="award">Award:</label>
+            <input id="award" formControlName="award" type="text" />
+    
+            <label for="copyrightHolder">Copyright Holder:</label>
+            <input id="copyrightHolder" formControlName="copyrightHolder" type="text" />
+    
+            <label for="copyrightNotice">Copyright Notice:</label>
+            <input id="copyrightNotice" formControlName="copyrightNotice" type="text" />
+    
+            <label for="copyrightYear">Copyright Year:</label>
+            <input id="copyrightYear" formControlName="copyrightYear" type="text" />
+      </div>
+  
+      <button *ngIf="!isEditing" (click)="enableEdit()" type="button">Edit</button>
+      <button *ngIf="isEditing" type="submit">Save</button>
+      <button *ngIf="isEditing" (click)="cancelEdit()" type="button">Cancel</button>
+      <button (click)="deleteBook(book.id)" type="button">Delete Book</button>
+    </form>
+   
+
+    
+</div>
+  

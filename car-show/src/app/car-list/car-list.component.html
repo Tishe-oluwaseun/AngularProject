@@ -1,0 +1,15 @@
+<div class="logo">
+  <img src="IMG-20240829-WA0006.jpg" alt="logo">
+  <h1>Tishe's Cars</h1>
+</div>
+<div class="list-container">
+  <div class="cars">
+    <div *ngFor="let car of cars">
+      <a [routerLink]="['/car', car.id]">
+        <img [src]="car.image" [alt]="car.name">
+        <p>Name: {{ car.name }}</p>
+        <p>Year: {{ car.year }}</p>
+      </a>
+    </div>
+  </div>
+</div>

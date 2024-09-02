@@ -1,0 +1,20 @@
+<img src="uuu.png" alt="logo">
+
+<div class="book-list-container">
+ 
+  <div class="book-radio-container">
+    <label *ngFor="let book of books; let i = index" class="book-radio-label">
+      <input type="radio" name="bookSelection" [value]="book.id" (change)="onSelectBook($event, i)" />
+      {{ book.bookName }}
+    </label>
+    <button (click)="navigateToAddBook()">Add New Book</button>
+  </div>
+
+  <div class="view-container">
+    <app-book-view *ngIf="selectedBook" [book]="selectedBook" (bookDeleted)="onBookDeleted($event)"></app-book-view>
+    <p *ngIf="!selectedBook">No book selected</p>
+  </div>
+ 
+</div>
+
+

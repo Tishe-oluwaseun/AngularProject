@@ -1,0 +1,28 @@
+a {
+    display: block;
+    margin: 20px 0;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+  
+a:hover {
+    background-color: gray;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 0 267px;
+}
+
+button:hover {
+    background-color: gray;
+}
+  
