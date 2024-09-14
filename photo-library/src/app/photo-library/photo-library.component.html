@@ -1,0 +1,19 @@
+<h2>Photo Library</h2>
+
+<!-- Add Event Form -->
+<form [formGroup]="addEventForm" (ngSubmit)="addEvent()">
+  <div>
+    <label for="eventName">Event Name:</label>
+    <input id="eventName" formControlName="eventName" placeholder="Enter event name" required />
+    <button type="submit" [disabled]="addEventForm.invalid">Add Event</button>
+  </div>
+</form>
+
+<!-- List of Events -->
+<div class="folder-container">
+  <div class="folder" *ngFor="let event of events">
+    <i class="material-icons">folder</i>
+    <span>{{ event.name }}</span>
+    <button (click)="deleteEvent(event)">Delete</button>
+  </div>
+</div>

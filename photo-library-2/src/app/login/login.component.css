@@ -1,0 +1,162 @@
+.container {
+    display: flex;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, white, rgb(247, 159, 247));
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 60%;
+    gap: 5px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+input {
+    width: 400px;
+    height: 40px;
+    display: flex;
+    border-radius: 14px;
+    padding-left: 40px; 
+    font-weight: bold;
+    box-shadow: 0px 10px 10px 0 #8105a0;
+}
+
+img .email{
+    margin-bottom: 5px;
+}
+
+.message img{
+    height: 200px;
+}
+
+.login-container img {
+    position: absolute;
+    margin-left: 10px;
+   margin-top: 5px;
+    width: 30px;
+    height: 30px;
+  
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 40%;
+    color: white;
+    border-radius: 15px 0 0 15px;
+    background: linear-gradient(to bottom, #8105a0, rgb(248, 139, 88));
+}
+.message h2 {
+    font-size: 40px;
+}
+
+.message p{
+    font-size: 25px;
+}
+
+
+button{
+    height: 45px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #8105a0, rgb(248, 139, 88));
+    font-weight: bold;
+    color: black;
+    font-size: 19px;
+    max-width: 446px;
+    cursor: pointer;
+}
+
+
+
+.login-container p{
+    font-size: 20px;
+    text-align: center;
+}
+
+button:disabled {
+    background-color: #ddd;
+    color: #ddd;
+}
+
+.ng-invalid.ng-touched {
+    border-color: red;
+}
+
+.ng-valid.ng-touched {
+    border-color: rgb(188, 34, 194);
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .login-container, .message {
+      width: 90%;
+    }
+  
+    .input-container input {
+      width: 300px;
+    }
+  
+    button {
+      max-width: 350px;
+    }
+}
+  
+  /* Mobile (480px and above) */
+@media (max-width: 480px) {
+    .login-container, .message {
+      width: 100%;
+    }
+  
+    .input-container input {
+      width: 250px;
+    }
+  
+    button {
+      max-width: 280px;
+    }
+  
+    .message h2 {
+      font-size: 25px;
+    }
+  
+    .message p {
+      font-size: 18px;
+    }
+}
+
+

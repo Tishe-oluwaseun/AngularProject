@@ -1,0 +1,46 @@
+<div class="greeting">
+  <h1>Welcome To Tishe's Online Photo Library</h1>
+  <p>Save pictures online to keep the memories alive😀😀</p>
+</div>
+
+<div class="container">
+
+  <div class="upload-container">
+    <form [formGroup]="addEventForm" (ngSubmit)="addEvent()">
+      <input id="eventName" formControlName="eventName" placeholder="Enter event name" />
+      <button type="submit" [disabled]="addEventForm.invalid">Add Event</button>
+      <div *ngIf="addEventForm.get('eventName')?.invalid && addEventForm.get('eventName')?.touched">
+        <small class="error">Please enter an event</small>
+      </div>
+    </form>
+  </div>
+
+  <div class="upload-container1" *ngIf="editMode">
+    <form [formGroup]="updateEventForm" (ngSubmit)="updateEvent()">
+      <label for="updatedEventName">Enter New Name: </label>
+      <input id="updatedEventName" formControlName="updatedEventName" placeholder="Enter new event name" />
+       <button type="submit" [disabled]="updateEventForm.invalid">Update</button>
+       <button type="button" (click)="resetEditMode()">Cancel</button>
+      
+       
+      
+    </form>
+  </div>
+
+  <div class="folder-container">
+    <div 
+      class="folder" 
+      *ngFor="let event of events" 
+      
+    >
+      <img src="folder.png" alt="Folder Icon" class="folder-icon"/>
+      <a [routerLink]="['/event-detail', event.id]">{{ event.name }}</a>
+      <div class="icons">
+        <img src="icons8-edit-50.png" (click)="editEvent(event)" alt="Edit" class="icon" title="Edit Event"/>
+        <img src="icons8-delete-50.png" (click)="deleteEvent(event.id)" alt="Delete" class="icon" title="Delete Event"/>
+      </div>
+    </div>
+  </div>
+
+  <button class="logout" (click)="logout()">Log Out</button>
+</div>

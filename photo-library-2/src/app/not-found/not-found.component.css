@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #8105a0, rgb(248, 139, 88));
+}
+
+h1{
+    font-size: 100px;
+    font-weight: bold;
+}
+
+p{
+    font-size: 40px;
+}

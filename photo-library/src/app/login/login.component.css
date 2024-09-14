@@ -1,0 +1,39 @@
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+  
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+ }
+button:disabled {
+    background-color: #ddd;
+}
+
+.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.ng-valid.ng-touched {
+  border-color: rgb(188, 34, 194);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+  

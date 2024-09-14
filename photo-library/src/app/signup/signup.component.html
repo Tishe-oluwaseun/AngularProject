@@ -1,0 +1,19 @@
+
+<div class="signup-container">
+  <h2>Sign Up</h2>
+  <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+    <input formControlName="email" type="email" placeholder="Email" />
+    <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+      <small class="error">Please enter a valid email</small>
+    </div>
+
+    <input formControlName="password" type="password" placeholder="Password" />
+    <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+      <small class="error">Password must be at least 6 characters</small>
+    </div>
+
+    <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </form>
+  <p>Already have an account? <a routerLink="/login">Login here</a></p>
+</div>

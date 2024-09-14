@@ -1,5 +1,5 @@
 {
-  "name": "auth-gaurds",
+  "name": "firebase.angular.crud",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:auth-gaurds": "node dist/auth-gaurds/server/server.mjs"
+    "serve:ssr:firebase.angular.crud": "node dist/firebase.angular.crud/server/server.mjs"
   },
   "private": true,
   "dependencies": {

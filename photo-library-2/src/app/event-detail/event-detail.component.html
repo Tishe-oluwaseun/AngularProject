@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="upload">
+    <h1>Upload a Photo</h1>
+    <input type="file" (change)="uploadPicture($event)" />
+    <div *ngIf="isUploading">
+      Uploading...
+    </div>
+  </div>
+  
+  <div class="photo-list">
+    <div class="photo-item" *ngFor="let picture of pictures">
+      <div class="photo-preview">
+        <!-- Use base64 string for the image source -->
+        <img [src]="picture.base64" alt="Photo" *ngIf="picture.base64" />
+      </div>
+      <div class="photo-details">
+        <button (click)="deletePicture(picture.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+     <button (click)="backToEvents()">Back to Events</button>
+  </div>
+ 
+</div>

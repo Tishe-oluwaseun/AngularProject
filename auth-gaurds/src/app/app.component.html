@@ -1,8 +1,11 @@
-<!-- app.component.html -->
 
-<nav>
-  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-  <a routerLink="/auth" routerLinkActive="active">Sign In</a>
-</nav>
+
+<div>
+  <a routerLink="/login" >Login</a>
+  <a routerLink="/signin" >Sign In</a>
+</div>
+<div>
+  <span (click)="logout()">Logout</span>
+</div>
 
 <router-outlet></router-outlet>

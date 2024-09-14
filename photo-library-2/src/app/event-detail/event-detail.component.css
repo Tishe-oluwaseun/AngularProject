@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, white, rgb(247, 159, 247));
+}
+
+.photo-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    justify-content: start; 
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px; 
+    height: 150px; 
+    text-align: center;
+    margin: 0 10px 10px 15px;
+}
+
+img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+}
+
+.photo-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 20px 0;
+}
+
+button {
+    height: 25px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #8105a0, rgb(248, 139, 88));
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+    
+}
+
+.button{
+    margin: 10px 0 0 15px;
+
+}
+input {
+    width: 300px;
+    background: linear-gradient(to right, #8105a0, rgb(248, 139, 88));
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.error-snackbar {
+    background-color: red;
+    color: white;
+}
